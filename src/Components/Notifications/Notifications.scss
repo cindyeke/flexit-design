@@ -1,0 +1,28 @@
+@import "../../Assets/styles/global.scss";
+
+.notifications {
+  position: relative;
+
+  &__icon {
+    font-size: 7vw;
+    color: var(--accent);
+  }
+
+  &__badge {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    width: 3vw;
+    border-radius: 50%;
+    background: var(--red);
+    color: white;
+    font-size: 2vw;
+    @include centerItems;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}

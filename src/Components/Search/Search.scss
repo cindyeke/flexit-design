@@ -1,0 +1,12 @@
+.search {
+  background-color: blue;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+  }
+
+  &__input {
+    width: 100%;
+  }
+}

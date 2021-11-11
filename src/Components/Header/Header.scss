@@ -1,0 +1,21 @@
+.header {
+  display: grid;
+  grid-template-areas: "nav logo";
+  grid-template-columns: 5vw auto;
+  grid-column-gap: 10px;
+
+  &__nav {
+    grid-area: nav;
+  }
+
+  &__logo {
+    grid-area: logo;
+    width: 35vw;
+    padding: 0.5rem 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}

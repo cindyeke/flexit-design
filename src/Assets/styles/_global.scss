@@ -1,0 +1,11 @@
+:root {
+  --accent: #41359c;
+  --red: rgb(182, 50, 50);
+  --green: rgb(42, 185, 42);
+}
+
+@mixin centerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
