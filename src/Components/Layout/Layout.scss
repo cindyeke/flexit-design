@@ -1,7 +1,9 @@
+@import "../../Assets/styles/global";
+
 .layout {
-  padding: 1rem;
+  padding: 1rem 0;
   display: grid;
-  grid-template-areas: "header account" "search search";
+  grid-template-areas: "header account" "search search" "categories categories" "cards cards";
 
   &__header {
     grid-area: header;
@@ -14,10 +16,33 @@
   &__account {
     grid-area: account;
   }
+
+  &__categories {
+    grid-area: categories;
+  }
+
+  &__cards {
+    grid-area: cards;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .layout {
-    grid-template-areas: "header search account";
+    display: flex;
+    padding: 0 3rem;
+
+    &__base {
+      @include inlineElements;
+      padding: 0 1rem;
+    }
+
+    &__heading {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__content {
+      @include inlineElements;
+    }
   }
 }

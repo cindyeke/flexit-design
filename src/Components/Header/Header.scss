@@ -3,6 +3,7 @@
   grid-template-areas: "nav logo";
   grid-template-columns: 5vw auto;
   grid-column-gap: 10px;
+  padding-left: 1rem;
 
   &__nav {
     grid-area: nav;
@@ -17,5 +18,29 @@
   &__image {
     width: 100%;
     height: auto;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .header {
+    padding-left: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--gray);
+    max-width: 20vw;
+    height: 100vh;
+    padding: 0;
+
+    &__logo {
+      width: 12vw;
+      padding: 0.5rem 0;
+      margin-top: 1rem;
+      margin-right: 1rem;
+    }
   }
 }

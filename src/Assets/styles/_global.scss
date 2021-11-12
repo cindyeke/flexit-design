@@ -1,11 +1,19 @@
 :root {
+  --white: #f0f0f3;
+  --black: rgb(27, 27, 27);
   --accent: #41359c;
   --red: rgb(182, 50, 50);
   --green: rgb(42, 185, 42);
+  --gray: rgb(160, 154, 154);
 }
 
 @mixin centerItems {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin inlineElements {
+  display: flex;
+  flex-direction: column;
 }

@@ -2,6 +2,7 @@
 
 .notifications {
   position: relative;
+  cursor: pointer;
 
   &__icon {
     font-size: 7vw;
@@ -23,6 +24,141 @@
       content: "";
       display: block;
       padding-bottom: 100%;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    width: 60vw;
+    height: auto;
+    opacity: 0;
+    z-index: 10000;
+    top: 50px;
+    right: 0;
+    transition: opacity 1s ease;
+    border: 1px solid var(--gray);
+    background: #fff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.notification {
+  &__content {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  &__avatar {
+    max-width: 10vw;
+  }
+
+  &__avatarimg {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__details {
+    max-width: 30vw;
+    font-size: 3.5vw;
+    margin-right: 0.5rem;
+
+    &--first {
+      font-size: 4vw;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: flex-end;
+
+    &--first {
+      color: var(--gray);
+    }
+
+    &--second {
+      color: var(--red);
+    }
+
+    &--third {
+      color: var(--accent);
+    }
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .notifications {
+    &__badge {
+      top: 40px;
+      right: 10px;
+    }
+
+    &__list {
+      top: 70px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .notifications {
+    &__badge {
+      top: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .notifications {
+    &__badge {
+      top: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .notifications {
+    margin-right: 10px;
+    &__icon {
+      font-size: 2.3vw;
+    }
+
+    &__badge {
+      top: 15px;
+      right: -5px;
+      width: 1.5vw;
+      font-size: 1vw;
+    }
+
+    &__list {
+      width: 30vw;
+      top: 40px;
+    }
+  }
+
+  .notification {
+    &__avatar {
+      max-width: 5vw;
+      margin-right: 0.5rem;
+    }
+
+    &__details {
+      font-size: 1vw;
+      margin-right: 0.5rem;
+      width: 30vw;
+
+      &--first {
+        font-size: 1.4vw;
+      }
+    }
+
+    &__icon {
+      width: 15vw;
     }
   }
 }

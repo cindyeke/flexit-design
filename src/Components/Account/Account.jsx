@@ -16,10 +16,12 @@ const Account = () => {
           <span className="account__status"></span>
         </div>
 
-        {/* <span className="account__user--name">
-          Abigail
-          <span className="account__dropdown">{signalDown}</span>
-        </span> */}
+        {screen.width > 1000 && (
+          <span className="account__user--name">
+            Abigail
+            <span className="account__dropdown">{signalDown}</span>
+          </span>
+        )}
       </div>
     </div>
   );
